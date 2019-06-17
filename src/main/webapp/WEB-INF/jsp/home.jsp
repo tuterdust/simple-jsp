@@ -9,12 +9,8 @@
 		<div>
 	    	<h1>JSP is here!</h1>
 			<h2>Message: ${message}</h2>
-			<%! String ip = "127.0.0.1"; %>
-			<%
-            	out.println("Your IP address should be " + ip);
-            %>
             <%! int dayInMonth = Integer.parseInt((new java.util.Date()).toLocaleString().substring(4,6)); %>
-            <p>Today's date: <%= dayInMonth %></p>
+            	<jsp:include page = "date.jsp" flush = "true" />
             <%-- This is comment --%>
             <% if (dayInMonth >= 1 && dayInMonth <= 16) { %>
             	<p>First Half of the month</p>
@@ -24,8 +20,8 @@
             <% for (int i = 0; i < 20; i++) {
             	out.print("=");
             } %>
-
-
+            <br />
+            <jsp:include page = "info.jsp" flush = "true" />
 		</div>
 </body>
 
