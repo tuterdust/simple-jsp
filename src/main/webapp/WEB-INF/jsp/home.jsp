@@ -2,6 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="www.simple-tag.com" prefix="ex" %>
+<%@taglib tagdir="/WEB-INF/tags" prefix="tg" %>
 <html lang="en">
 <head>
 
@@ -9,6 +10,7 @@
 <body>
 		<div>
 	    	<h1>JSP is here!</h1>
+	    	<tg:nyan name="nyan cat" />
 	    	<ex:hello />
 			<h2>Message: ${message}</h2>
             <%! int dayInMonth = Integer.parseInt((new java.util.Date()).toLocaleString().substring(4,6)); %>
